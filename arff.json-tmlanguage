@@ -1,0 +1,61 @@
+{
+   "name":"The ARFF file",
+   "scopeName":"source.arff",
+   "fileTypes":[
+      "arff"
+   ],
+   "patterns":[
+      {
+         "name":"keyword.tag.arff",
+         "begin":"{",
+         "patterns":[
+            {
+               "name":"meta.brace.curly.arff",
+               "match":"{",
+               "captures":{
+                  "1":{
+                     "name":"string.other.arff"
+                  }
+               }
+            },
+            {
+               "name":"meta.delimiter.value.comma.arff",
+               "match":",",
+               "comment":"Attribute values for each instance are delimited by commas."
+            },
+            {
+               "name":"string.arff",
+               "match":"([A-Za-zÀ-ú0-9_-|?])+",
+               "comment":"Values"
+            }
+         ],
+         "end":"}"
+      },
+      {
+         "name":"constant.character.empty.arff",
+         "match":"\\?",
+         "comment":"A missing value is represented by a single question mark."
+      },
+      {
+         "name":"keyword.arff",
+         "match":"@(relation|attribute|data)",
+         "comment":"The @relation, @attribute and @data declarations are case insensitive"
+      },
+      {
+         "name":"constant.character.arff",
+         "match":"((?![\b-])numeric(?![\\w-])|(?![\b-])integer(?![\\w-])|(?![\b-])real(?![\\w-])|(?![\b-])string(?![\\w-])|(?![\b-])date(?![\\w-]))",
+         "comment":"The @relation, @attribute and @data declarations are case insensitive"
+      },
+      {
+         "match":"%.*",
+         "name":"comment.line.percentage.arff",
+         "captures":{
+            "1":{
+               "name":"comment.line.percentage.arff"
+            }
+         },
+         "comment":"Comments"
+      }
+   ],
+   "uuid":"cb14dc10-a45a-11e2-9e96-0800200c9a66"
+}
