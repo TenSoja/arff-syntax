@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>fileTypes</key>
+	<array>
+		<string>arff</string>
+	</array>
+	<key>name</key>
+	<string>The ARFF file</string>
+	<key>patterns</key>
+	<array>
+		<dict>
+			<key>begin</key>
+			<string>{</string>
+			<key>end</key>
+			<string>}</string>
+			<key>name</key>
+			<string>keyword.tag.arff</string>
+			<key>patterns</key>
+			<array>
+				<dict>
+					<key>captures</key>
+					<dict>
+						<key>1</key>
+						<dict>
+							<key>name</key>
+							<string>string.other.arff</string>
+						</dict>
+					</dict>
+					<key>match</key>
+					<string>{</string>
+					<key>name</key>
+					<string>meta.brace.curly.arff</string>
+				</dict>
+				<dict>
+					<key>comment</key>
+					<string>Attribute values for each instance are delimited by commas.</string>
+					<key>match</key>
+					<string>,</string>
+					<key>name</key>
+					<string>meta.delimiter.value.comma.arff</string>
+				</dict>
+				<dict>
+					<key>comment</key>
+					<string>Values</string>
+					<key>match</key>
+					<string>([A-Za-zÀ-ú0-9_-|?])+</string>
+					<key>name</key>
+					<string>string.arff</string>
+				</dict>
+			</array>
+		</dict>
+		<dict>
+			<key>comment</key>
+			<string>A missing value is represented by a single question mark.</string>
+			<key>match</key>
+			<string>\?</string>
+			<key>name</key>
+			<string>constant.character.empty.arff</string>
+		</dict>
+		<dict>
+			<key>comment</key>
+			<string>The @relation, @attribute and @data declarations are case insensitive</string>
+			<key>match</key>
+			<string>@(relation|attribute|data)</string>
+			<key>name</key>
+			<string>keyword.arff</string>
+		</dict>
+		<dict>
+			<key>comment</key>
+			<string>The @relation, @attribute and @data declarations are case insensitive</string>
+			<key>match</key>
+			<string>((?![-])numeric(?![\w-])|(?![-])integer(?![\w-])|(?![-])real(?![\w-])|(?![-])string(?![\w-])|(?![-])date(?![\w-]))</string>
+			<key>name</key>
+			<string>constant.character.arff</string>
+		</dict>
+		<dict>
+			<key>captures</key>
+			<dict>
+				<key>1</key>
+				<dict>
+					<key>name</key>
+					<string>comment.line.percentage.arff</string>
+				</dict>
+			</dict>
+			<key>comment</key>
+			<string>Comments</string>
+			<key>match</key>
+			<string>%.*</string>
+			<key>name</key>
+			<string>comment.line.percentage.arff</string>
+		</dict>
+	</array>
+	<key>scopeName</key>
+	<string>source.arff</string>
+	<key>uuid</key>
+	<string>cb14dc10-a45a-11e2-9e96-0800200c9a66</string>
+</dict>
+</plist>
