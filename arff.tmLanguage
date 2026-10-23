@@ -63,7 +63,7 @@
 			<key>comment</key>
 			<string>The @relation, @attribute and @data declarations are case insensitive</string>
 			<key>match</key>
-			<string>@(relation|attribute|data)</string>
+			<string>(?i)@(relation|attribute|data)</string>
 			<key>name</key>
 			<string>keyword.arff</string>
 		</dict>
@@ -71,7 +71,7 @@
 			<key>comment</key>
 			<string>The @relation, @attribute and @data declarations are case insensitive</string>
 			<key>match</key>
-			<string>((?![-])numeric(?![\w-])|(?![-])integer(?![\w-])|(?![-])real(?![\w-])|(?![-])string(?![\w-])|(?![-])date(?![\w-]))</string>
+			<string>(?i)((?![-])numeric(?![\w-])|(?![-])integer(?![\w-])|(?![-])real(?![\w-])|(?![-])string(?![\w-])|(?![-])date(?![\w-]))</string>
 			<key>name</key>
 			<string>constant.character.arff</string>
 		</dict>

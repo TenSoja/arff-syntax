@@ -38,12 +38,12 @@
       },
       {
          "name":"keyword.arff",
-         "match":"@(relation|attribute|data)",
+         "match":"(?i)@(relation|attribute|data)",
          "comment":"The @relation, @attribute and @data declarations are case insensitive"
       },
       {
          "name":"constant.character.arff",
-         "match":"((?![\b-])numeric(?![\\w-])|(?![\b-])integer(?![\\w-])|(?![\b-])real(?![\\w-])|(?![\b-])string(?![\\w-])|(?![\b-])date(?![\\w-]))",
+         "match":"(?i)((?![-])numeric(?![\\w-])|(?![-])integer(?![\\w-])|(?![-])real(?![\\w-])|(?![-])string(?![\\w-])|(?![-])date(?![\\w-]))",
          "comment":"The @relation, @attribute and @data declarations are case insensitive"
       },
       {
